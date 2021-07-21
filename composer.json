@@ -1,4 +1,13 @@
 {
+    "name": "voiku0/simple-core",
+    "description": "A simple starting core for your awesome api",
+    "authors": [
+        {
+            "name": "Tudor Voicu Bradu",
+            "email": "tvbradu@gmail.com"
+        }
+    ],
+    "license": "MIT",
     "require": {
         "slim/slim": "4.*",
         "slim/psr7": "^1.4",
@@ -9,6 +18,8 @@
         "laminas/laminas-diactoros": "^2.6"
     },
     "autoload": {
-        "base": "src"
+        "psr-4": {
+            "SimpleCore\\": "src/SimpleCore"
+        }
     }
 }
