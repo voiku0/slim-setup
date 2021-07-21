@@ -17,7 +17,6 @@ $app->get('/', function (Request $request, Response $response, $args) {
 
 $app->post('/', function (Request $request, Response $response, $args){
   $body = $request->getParsedBody();
-  //var_dump($body);die();
   $response->getBody()->write(json_encode($body));
   $response->withHeader('Content-type', 'application/json');
   return $response;
