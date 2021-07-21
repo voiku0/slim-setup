@@ -7,5 +7,8 @@
         "guzzlehttp/psr7": "^2.0",
         "http-interop/http-factory-guzzle": "^1.1",
         "laminas/laminas-diactoros": "^2.6"
+    },
+    "autoload": {
+        "base": "src"
     }
 }
