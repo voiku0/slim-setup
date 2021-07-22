@@ -19,7 +19,9 @@
     },
     "autoload": {
         "psr-4": {
-            "SimpleCore\\": "src/SimpleCore"
+            "SimpleCore\\": "src/SimpleCore",
+            "SimpleCore\\Exception\\": "src/SimpleCore/Exception",
+            "SimpleCore\\Handlers\\": "src/SimpleCore/Handlers"
         }
     }
 }

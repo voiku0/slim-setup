@@ -4,6 +4,7 @@ use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
 
+use SimpleCore\Exception\SimpleCoreException;
 use Slim\App;
 
 class DefaultRoutes extends ControllerAbstract
@@ -20,9 +21,14 @@ class DefaultRoutes extends ControllerAbstract
     return $response;
   }
 
+  public function error(Request $request, Response $response, $args) {
+    throw new SimpleCoreException('sda',12);
+  }
+
   public function getRoutes(App $app)
   {
     $app->get('/', DefaultRoutes::class.':helloWorld');
+    $app->get('/error[/]', DefaultRoutes::class.':error');
     $app->post('/', DefaultRoutes::class.':postJson');
   }
 }
